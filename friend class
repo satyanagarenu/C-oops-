@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+class complex;
+class calci{
+	int c;
+	int d;
+	public:
+   int add(int c,int d){
+   	return c+d;
+   	
+   }
+   int real(complex ,complex );
+ 
+   
+};
+class complex{
+	private:
+	int c;
+	int d;
+	public:
+		friend calci::real(complex ,complex );
+		void setnumber(int a,int b){
+			c=a;
+			d=b;
+			void printnumber();
+		}
+		void printnumber(){
+			cout<<"number is"<<c<<" +i "<<d;
+			
+		}
+};
+int calci::real(complex s1,complex s2){
+	
+ return (s1.c+s2.c);
+	
+}
+
+int main(){
+	complex q1,q2;
+	q1.setnumber(2,3);
+	q2.setnumber(4,5);
+	calci q3;
+
+	int c=q3.real(q1,q2);
+	cout<<c;
+}
