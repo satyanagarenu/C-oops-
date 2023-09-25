@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class complex{
+	int a;
+	int b;
+	public:
+		void getnumber(int c,int d){
+			a=c;
+			b=d;
+		}friend complex sumofnum(complex c1,complex c2);
+		void setnumber(){
+			cout<<"complex number is"<<a<<" + i"<<b<<endl;
+			
+		}
+};
+complex sumofnum(complex c1,complex c2){
+	complex s4;
+	s4.getnumber(c1.a+c2.a,c1.b+c2.b);
+	return s4;
+}
+int main(){
+	complex s1,s2,s3;
+	s1.getnumber(4,5);
+	s2.getnumber(5,6);
+	s3=sumofnum(s1,s2);
+	cout<<s3;
+	
+	}
