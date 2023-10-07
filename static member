@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+class employee{
+	int itemid[20];
+	int itemprice[20];
+	public:
+	static int counter;
+	public:
+	
+	void setprice(){
+		cin>>itemid[counter];
+		cin>>itemprice[counter];
+		counter++;
+	}
+	void displayprice(){
+	for(int i=0;i<counter;i++){
+		cout<<itemid[i]<<"/n"<<itemprice[i]<<endl;
+	}
+	}
+};int employee::counter=0;
+int main(){
+	employee raj;
+	raj.setprice();
+	raj.setprice();
+	raj.setprice();
+	raj.displayprice();
+	return 0;
+}
