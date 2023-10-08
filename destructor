@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int count=0;
+class Num{
+	 
+	public:
+		
+	Num(){
+	count++;
+		cout<<"counstructor is called object number is"<<count<<endl;
+		
+	}
+	~Num(){
+		cout<<"destructor is called and object count is "<<count<<endl;
+		count--;
+	}
+};
+
+int main(){
+	Num n1;
+	{
+		cout<<"entereing the loop"<<endl;
+		Num n2;
+		Num n3;
+		cout<<"existing the loop"<<endl;
+		
+	}
+}
